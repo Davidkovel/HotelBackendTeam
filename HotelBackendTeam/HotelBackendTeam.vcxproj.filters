@@ -7,15 +7,36 @@
     <Filter Include="library">
       <UniqueIdentifier>{cebfe291-adb5-4f68-bfec-4f578833a871}</UniqueIdentifier>
     </Filter>
+    <Filter Include="domain">
+      <UniqueIdentifier>{e6c03444-359d-4ba1-a389-7c97fec826fa}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="main.cpp">
       <Filter>main</Filter>
     </ClCompile>
+    <ClCompile Include="Room.cpp">
+      <Filter>domain</Filter>
+    </ClCompile>
+    <ClCompile Include="Booking.cpp">
+      <Filter>domain</Filter>
+    </ClCompile>
+    <ClCompile Include="Hotel.cpp">
+      <Filter>domain</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="library.h">
       <Filter>library</Filter>
+    </ClInclude>
+    <ClInclude Include="Room.h">
+      <Filter>domain</Filter>
+    </ClInclude>
+    <ClInclude Include="Hotel.h">
+      <Filter>domain</Filter>
+    </ClInclude>
+    <ClInclude Include="Booking.h">
+      <Filter>domain</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>
