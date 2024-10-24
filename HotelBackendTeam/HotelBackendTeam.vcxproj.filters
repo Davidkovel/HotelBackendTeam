@@ -10,6 +10,9 @@
     <Filter Include="domain">
       <UniqueIdentifier>{e6c03444-359d-4ba1-a389-7c97fec826fa}</UniqueIdentifier>
     </Filter>
+    <Filter Include="user_cases">
+      <UniqueIdentifier>{f887bdb3-5fcc-4704-8eb2-f82cbcfdd35d}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="main.cpp">
@@ -37,6 +40,12 @@
     </ClInclude>
     <ClInclude Include="Booking.h">
       <Filter>domain</Filter>
+    </ClInclude>
+    <ClInclude Include="BookingService.h">
+      <Filter>user_cases</Filter>
+    </ClInclude>
+    <ClInclude Include="HotelService.h">
+      <Filter>user_cases</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>

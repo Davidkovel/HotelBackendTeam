@@ -10,11 +10,15 @@ Hotel::~Hotel() {
     // Destructor, clean up if necessary.
 }
 
-vector<Room*> Hotel::getAvailableRooms() {
-    vector<Room*> availableRooms;
-    for (Room& room : rooms) {
+void Hotel::addRoom(const Room& room) {
+    rooms.push_back(room);
+}
+
+vector<Room> Hotel::getAvailableRooms() {
+    vector<Room> availableRooms;
+    for (const auto& room : rooms) {
         if (room.getAvailability()) {
-            availableRooms.push_back(&room);
+            availableRooms.push_back(room);
         }
     }
     return availableRooms;
@@ -39,4 +43,13 @@ void Hotel::displayAllRooms() const {
     for (const Room& room : rooms) {
         room.displayRoomInfo();
     }
+}
+
+Room* Hotel::findRoomByNumber(int roomNumber) {
+    for (auto& room : rooms) {
+        if (room.getRoomNumber() == roomNumber) {
+            return &room;
+        }
+    }
+    return nullptr;
 }

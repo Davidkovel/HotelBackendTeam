@@ -13,9 +13,11 @@ public:
     Hotel(const Hotel& other);
     ~Hotel();
 
-    vector<Room*> getAvailableRooms();
+    void addRoom(const Room& room);
+    vector<Room> getAvailableRooms();
     bool bookRoom(int roomNumber);
     void displayAllRooms() const;
+    Room* findRoomByNumber(int roomNumber);
 };
 
 #endif

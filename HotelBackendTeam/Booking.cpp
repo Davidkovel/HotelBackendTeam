@@ -2,8 +2,8 @@
 
 Booking::Booking() = default;
 
-Booking::Booking(Guest* guest, Room* room)
-    : guest(guest), room(room) {}
+Booking::Booking(int id, const string& guest, int room)
+    : bookingId(id), guestName(guest), roomNumber(room) {}
 
 Booking::Booking(const Booking& other)
     : guest(other.guest), room(other.room) {}
@@ -12,12 +12,18 @@ Booking::~Booking() {
     // empty
 }
 
+int Booking::getBookingId() const {
+    return bookingId;
+}
+
+string Booking::getGuestName() const {
+    return guestName;
+}
+
+int Booking::getRoomNumber() const {
+    return roomNumber;
+}
+
 void Booking::confirmBooking() {
-    if (room->getAvailability()) {
-        room->bookRoom();
-        cout << "Room " << room->getRoomNumber() << " booked for guest " << guest->getName() << endl;
-    }
-    else {
-        cout << "Room " << room->getRoomNumber() << " is already booked." << endl;
-    }
+    std::cout << "Booking confirmed for guest: " << guestName << " in room " << roomNumber << std::endl;
 }
