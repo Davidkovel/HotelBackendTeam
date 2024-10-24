@@ -13,11 +13,9 @@ jobs:
 
     steps:
     - uses: actions/checkout@v4
-    - name: configure
-      run: ./configure
-    - name: make
+
+    - name: Install Dependencies
+      run: sudo apt-get install make gcc g++
+
+    - name: Build with Make
       run: make
-    - name: make check
-      run: make check
-    - name: make distcheck
-      run: make distcheck
