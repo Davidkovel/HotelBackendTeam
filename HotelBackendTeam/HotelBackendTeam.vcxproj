@@ -19,7 +19,20 @@
     </ProjectConfiguration>
   </ItemGroup>
   <ItemGroup>
+    <ClCompile Include="Booking.cpp" />
+    <ClCompile Include="Hotel.cpp" />
     <ClCompile Include="main.cpp" />
+    <ClCompile Include="Room.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="Booking.h" />
+    <ClInclude Include="BookingService.h" />
+    <ClInclude Include="ConsoleUI.h" />
+    <ClInclude Include="Hotel.h" />
+    <ClInclude Include="HotelService.h" />
+    <ClInclude Include="library.h" />
+    <ClInclude Include="Room.h" />
+    <ClInclude Include="UserInterface.h" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="domain.h" />

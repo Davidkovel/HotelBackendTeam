@@ -4,6 +4,21 @@
     <Filter Include="main">
       <UniqueIdentifier>{6bbf01aa-5bfb-4456-822b-6fe0718b17e5}</UniqueIdentifier>
     </Filter>
+    <Filter Include="library">
+      <UniqueIdentifier>{cebfe291-adb5-4f68-bfec-4f578833a871}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="domain">
+      <UniqueIdentifier>{e6c03444-359d-4ba1-a389-7c97fec826fa}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="user_cases">
+      <UniqueIdentifier>{f887bdb3-5fcc-4704-8eb2-f82cbcfdd35d}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="presentation">
+      <UniqueIdentifier>{05f74576-9db9-43f5-a4a4-3b41cd29cc4b}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="repository">
+      <UniqueIdentifier>{52995ad7-d54a-4565-8fe0-352448faa6c7}</UniqueIdentifier>
+=======
     <Filter Include="lib">
       <UniqueIdentifier>{fb04958f-fead-413c-9b9f-4519dbb80142}</UniqueIdentifier>
     </Filter>
@@ -15,6 +30,41 @@
     <ClCompile Include="main.cpp">
       <Filter>main</Filter>
     </ClCompile>
+    <ClCompile Include="Room.cpp">
+      <Filter>domain</Filter>
+    </ClCompile>
+    <ClCompile Include="Booking.cpp">
+      <Filter>domain</Filter>
+    </ClCompile>
+    <ClCompile Include="Hotel.cpp">
+      <Filter>domain</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="library.h">
+      <Filter>library</Filter>
+    </ClInclude>
+    <ClInclude Include="Room.h">
+      <Filter>domain</Filter>
+    </ClInclude>
+    <ClInclude Include="Hotel.h">
+      <Filter>domain</Filter>
+    </ClInclude>
+    <ClInclude Include="Booking.h">
+      <Filter>domain</Filter>
+    </ClInclude>
+    <ClInclude Include="BookingService.h">
+      <Filter>user_cases</Filter>
+    </ClInclude>
+    <ClInclude Include="HotelService.h">
+      <Filter>user_cases</Filter>
+    </ClInclude>
+    <ClInclude Include="UserInterface.h">
+      <Filter>presentation</Filter>
+    </ClInclude>
+    <ClInclude Include="ConsoleUI.h">
+      <Filter>presentation</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="lib.h">
