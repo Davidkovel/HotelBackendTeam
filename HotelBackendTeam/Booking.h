@@ -3,13 +3,6 @@
 
 #include "Room.h"
 
-// TEMPORARY CLASS
-class Guest {
-public:
-    string getName() const { return "Guest Name"; }
-};
-
-// -----
 class Booking {
 private:
     int bookingId;

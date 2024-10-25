@@ -31,12 +31,12 @@
     <ClInclude Include="Hotel.h" />
     <ClInclude Include="HotelService.h" />
     <ClInclude Include="library.h" />
+    <ClInclude Include="logger.h" />
     <ClInclude Include="Room.h" />
     <ClInclude Include="UserInterface.h" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="domain.h" />
-    <ClInclude Include="lib.h" />
     <ClInclude Include="users_class.h" />
   </ItemGroup>
   <PropertyGroup Label="Globals">

@@ -19,17 +19,21 @@ public:
         if (room && room->getAvailability()) {
             room->bookRoom();
             bookings.emplace_back(nextBookingId++, guestName, roomNumber);
-            cout << "Room " << roomNumber << " booked for " << guestName << endl;
+            Logger::info("Room " + std::to_string(roomNumber) + " booked for " + guestName);
             return true;
         }
-        cout << "Room " << roomNumber << " is not available." << endl;
+        Logger::warning("Room " + std::to_string(roomNumber) + " is not available for " + guestName);
         return false;
     }
     /*
-    push_back добавляет копию объекта (или обеспечивает перемещение, если возможно), а emplace_back создает объект непосредственно в конце вектора, т.е. без лишнего копирования (или перемещения).
+     push_back добавляет копию объекта (или обеспечивает перемещение, если возможно), а emplace_back создает объект непосредственно в конце вектора, т.е. без лишнего копирования (или перемещения).
     */
 
     void displayBookings() const {
+        if (bookings.empty()) {
+            Logger::info("No current bookings available.");
+            return;
+        }
         for (const auto& booking : bookings) {
             cout << "Booking ID: " << booking.getBookingId()
                 << ", Guest Name: " << booking.getGuestName()
