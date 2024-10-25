@@ -10,14 +10,12 @@ Booking::Booking() {
 Booking::Booking(int id, const string& guest, int room)
     : bookingId(id), guestName(guest), roomNumber(room) 
 {
-    cout << "sdfsdf" << endl;
 }
 
 Booking::Booking(const Booking& other)
     : guest(other.guest), room(other.room) {}
 
 Booking::~Booking() {
-    // empty
 }
 
 int Booking::getBookingId() const {

@@ -14,20 +14,39 @@ private:
 public:
     BookingService(Hotel& h) : hotel(h), nextBookingId(1) {}
 
-    bool bookRoom(int roomNumber, const string& guestName) {
+    bool bookRoom(int roomNumber, const Guest& guest) {
         Room* room = hotel.findRoomByNumber(roomNumber);
         if (room && room->getAvailability()) {
             room->bookRoom();
-            bookings.emplace_back(nextBookingId++, guestName, roomNumber);
-            Logger::info("Room " + std::to_string(roomNumber) + " booked for " + guestName);
+            bookings.emplace_back(nextBookingId++, guest.getName(), roomNumber);
+            Logger::info("Room " + to_string(roomNumber) + " booked for " + guest.getName());
             return true;
         }
-        Logger::warning("Room " + std::to_string(roomNumber) + " is not available for " + guestName);
+        Logger::warning("Room " + to_string(roomNumber) + " is not available for " + guest.getName());
         return false;
     }
     /*
      push_back добавляет копию объекта (или обеспечивает перемещение, если возможно), а emplace_back создает объект непосредственно в конце вектора, т.е. без лишнего копирования (или перемещения).
     */
+
+
+    bool deleteGuestRoom(const Guest& guest) {
+        auto it = find_if(bookings.begin(), bookings.end(),
+            [&guest](const Booking& booking) {
+                return booking.getGuestName() == guest.getName();
+            });
+
+        if (it != bookings.end()) {
+            int roomNumber = it->getRoomNumber();
+            hotel.findRoomByNumber(roomNumber)->freeRoom();
+            bookings.erase(it);
+            Logger::info("Room " + to_string(roomNumber) + " freed for " + guest.getName());
+            return true;
+        }
+
+        Logger::warning("No booking found for " + guest.getName());
+        return false;
+    }
 
     void displayBookings() const {
         if (bookings.empty()) {

@@ -11,7 +11,7 @@ Hotel::~Hotel() {
 
 void Hotel::addRoom(const Room& room) {
     rooms.push_back(room);
-    Logger::info("Room added: " + std::to_string(room.getRoomNumber()));
+    Logger::info("Room added: " + to_string(room.getRoomNumber()));
 }
 
 vector<Room> Hotel::getAvailableRooms() {
@@ -32,16 +32,16 @@ bool Hotel::bookRoom(int roomNumber) {
         if (room.getRoomNumber() == roomNumber) {
             if (room.getAvailability()) {
                 room.bookRoom();
-                Logger::info("Room " + std::to_string(roomNumber) + " booked.");
+                Logger::info("Room " + to_string(roomNumber) + " booked.");
                 return true;
             }
             else {
-                Logger::warning("Room " + std::to_string(roomNumber) + " is not available.");
+                Logger::warning("Room " + to_string(roomNumber) + " is not available.");
                 return false;
             }
         }
     }
-    Logger::error("Room " + std::to_string(roomNumber) + " not found.");
+    Logger::error("Room " + to_string(roomNumber) + " not found.");
     return false;
 }
 
@@ -57,6 +57,6 @@ Room* Hotel::findRoomByNumber(int roomNumber) {
             return &room;
         }
     }
-    Logger::error("Room " + std::to_string(roomNumber) + " not found.");
+    Logger::error("Room " + to_string(roomNumber) + " not found.");
     return nullptr;
 }
