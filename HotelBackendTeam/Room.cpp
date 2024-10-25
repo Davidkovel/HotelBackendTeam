@@ -22,20 +22,20 @@ bool Room::getAvailability() const {
 void Room::bookRoom() {
     if (isAvailable) {
         isAvailable = false;
-        Logger::info("Room " + std::to_string(roomNumber) + " has been booked.");
+        Logger::info("Room " + to_string(roomNumber) + " has been booked.");
     }
     else {
-        Logger::warning("Room " + std::to_string(roomNumber) + " is already booked.");
+        Logger::warning("Room " + to_string(roomNumber) + " is already booked.");
     }
 }
 
 void Room::freeRoom() {
     if (!isAvailable) {
         isAvailable = true;
-        Logger::info("Room " + std::to_string(roomNumber) + " has been freed.");
+        Logger::info("Room " + to_string(roomNumber) + " has been freed.");
     }
     else {
-        Logger::warning("Room " + std::to_string(roomNumber) + " is already free.");
+        Logger::warning("Room " + to_string(roomNumber) + " is already free.");
     }
 }
 
