@@ -18,6 +18,12 @@
     </Filter>
     <Filter Include="repository">
       <UniqueIdentifier>{52995ad7-d54a-4565-8fe0-352448faa6c7}</UniqueIdentifier>
+=======
+    <Filter Include="lib">
+      <UniqueIdentifier>{fb04958f-fead-413c-9b9f-4519dbb80142}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="domain">
+      <UniqueIdentifier>{dbe8b874-ebf2-4150-8738-01946b64266f}</UniqueIdentifier>
     </Filter>
   </ItemGroup>
   <ItemGroup>
@@ -58,6 +64,17 @@
     </ClInclude>
     <ClInclude Include="ConsoleUI.h">
       <Filter>presentation</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="lib.h">
+      <Filter>lib</Filter>
+    </ClInclude>
+    <ClInclude Include="users_class.h">
+      <Filter>domain</Filter>
+    </ClInclude>
+    <ClInclude Include="domain.h">
+      <Filter>domain</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>

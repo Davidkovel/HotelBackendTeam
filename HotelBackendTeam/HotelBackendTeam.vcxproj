@@ -34,6 +34,11 @@
     <ClInclude Include="Room.h" />
     <ClInclude Include="UserInterface.h" />
   </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="domain.h" />
+    <ClInclude Include="lib.h" />
+    <ClInclude Include="users_class.h" />
+  </ItemGroup>
   <PropertyGroup Label="Globals">
     <VCProjectVersion>17.0</VCProjectVersion>
     <Keyword>Win32Proj</Keyword>
