@@ -3,32 +3,30 @@
 #include "Hotel.h"
 #include "HotelService.h"
 #include "BookingService.h"
+#include "ConsoleUI.h"
 
 int main() {
-    // Создаем отель и номера
-    Hotel hotel;
+    ConsoleUI ui;
 
+    Hotel hotel;
     hotel.addRoom(Room(101, 100.0));
     hotel.addRoom(Room(102, 150.0));
     hotel.addRoom(Room(103, 200.0));
 
-    // Создаем сервисы
     HotelService hotelService(hotel);
     BookingService bookingService(hotel);
 
-    // Показать все номера
-    cout << "All Rooms:" << endl;
+    ui.displayMessage("All Rooms:");
     hotelService.displayAllRooms();
 
-    // Попробовать забронировать номер
     bookingService.bookRoom(101, "John Doe");
+    bookingService.bookRoom(102, "John Doe 2");
+    bookingService.bookRoom(103, "John Doe 3");
 
-    // Показать все бронирования
-    cout << "\nCurrent Bookings:" << endl;
+    ui.displayMessage("\nCurrent Bookings:");
     bookingService.displayBookings();
 
-    // Показать доступные номера
-    cout << "\nAvailable Rooms:" << endl;
+    ui.displayMessage("\nAvailable Rooms:");
     vector<Room> availableRooms = hotelService.getAvailableRooms();
     for (const auto& room : availableRooms) {
         room.displayRoomInfo();

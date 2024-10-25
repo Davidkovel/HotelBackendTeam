@@ -27,10 +27,12 @@
   <ItemGroup>
     <ClInclude Include="Booking.h" />
     <ClInclude Include="BookingService.h" />
+    <ClInclude Include="ConsoleUI.h" />
     <ClInclude Include="Hotel.h" />
     <ClInclude Include="HotelService.h" />
     <ClInclude Include="library.h" />
     <ClInclude Include="Room.h" />
+    <ClInclude Include="UserInterface.h" />
   </ItemGroup>
   <PropertyGroup Label="Globals">
     <VCProjectVersion>17.0</VCProjectVersion>

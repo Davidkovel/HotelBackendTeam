@@ -13,6 +13,12 @@
     <Filter Include="user_cases">
       <UniqueIdentifier>{f887bdb3-5fcc-4704-8eb2-f82cbcfdd35d}</UniqueIdentifier>
     </Filter>
+    <Filter Include="presentation">
+      <UniqueIdentifier>{05f74576-9db9-43f5-a4a4-3b41cd29cc4b}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="repository">
+      <UniqueIdentifier>{52995ad7-d54a-4565-8fe0-352448faa6c7}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="main.cpp">
@@ -46,6 +52,12 @@
     </ClInclude>
     <ClInclude Include="HotelService.h">
       <Filter>user_cases</Filter>
+    </ClInclude>
+    <ClInclude Include="UserInterface.h">
+      <Filter>presentation</Filter>
+    </ClInclude>
+    <ClInclude Include="ConsoleUI.h">
+      <Filter>presentation</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>

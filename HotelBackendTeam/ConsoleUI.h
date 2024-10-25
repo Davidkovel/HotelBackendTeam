@@ -1,9 +1,7 @@
-// src/presentation/ConsoleUI.h
 #ifndef CONSOLE_UI_H
 #define CONSOLE_UI_H
 
 #include "UserInterface.h"
-
 
 class ConsoleUI : public UserInterface {
 public:

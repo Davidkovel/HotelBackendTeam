@@ -25,6 +25,9 @@ public:
         cout << "Room " << roomNumber << " is not available." << endl;
         return false;
     }
+    /*
+    push_back добавляет копию объекта (или обеспечивает перемещение, если возможно), а emplace_back создает объект непосредственно в конце вектора, т.е. без лишнего копирования (или перемещения).
+    */
 
     void displayBookings() const {
         for (const auto& booking : bookings) {

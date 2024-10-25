@@ -21,6 +21,10 @@ vector<Room> Hotel::getAvailableRooms() {
             availableRooms.push_back(room);
         }
     }
+    if (availableRooms.empty())
+    {
+        cout << "[INFO] There is no avaliable rooms" << endl;
+    }
     return availableRooms;
 }
 
